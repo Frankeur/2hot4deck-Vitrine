@@ -1,0 +1,19 @@
+# Secrets : ne JAMAIS les envoyer sur GitHub
+.env
+.env.*
+!.env.example
+site_web/cle_bot.txt
+
+# Les données des joueurs restent sur le serveur
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Fichiers temporaires
+__pycache__/
+*.pyc
+*.log
+
+# L’environnement Python du serveur
+.venv/

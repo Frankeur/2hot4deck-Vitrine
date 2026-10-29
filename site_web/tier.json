@@ -1,0 +1,2402 @@
+{
+"AzirLR": {
+"src": "Faker (pack Worlds)",
+"worlds": {
+"tier": "S",
+"rang": 1,
+"score": 94.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 5,
+"score": 86.5,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "S",
+"rang": 1,
+"score": 82.0,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"RyzeLR": {
+"src": "Faker (pack Worlds)",
+"worlds": {
+"tier": "S",
+"rang": 2,
+"score": 90.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 9,
+"score": 82.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 42,
+"score": 66.7,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"AhriLR": {
+"src": "Faker (pack Worlds)",
+"worlds": {
+"tier": "S",
+"rang": 3,
+"score": 88.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 1,
+"score": 90.2,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "S",
+"rang": 7,
+"score": 70.9,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"YoneUR": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "S",
+"rang": 4,
+"score": 87.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 3,
+"score": 89.5,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "A",
+"rang": 17,
+"score": 68.5,
+"item": "Lame d'infini",
+"rune": "Tempo mortel"
+}
+},
+"ViegoUR": {
+"src": "Worlds · T1",
+"worlds": {
+"tier": "S",
+"rang": 5,
+"score": 86.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 14,
+"score": 78.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 35,
+"score": 67.1,
+"item": "Ange gardien",
+"rune": "Jeu de jambes"
+}
+},
+"VarusUR": {
+"src": "Worlds · HLE",
+"worlds": {
+"tier": "S",
+"rang": 6,
+"score": 86.4,
+"item": "Danseur fantôme",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 4,
+"score": 89.0,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 44,
+"score": 66.2,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"SylasUR": {
+"src": "LEC · Movistar KOI",
+"worlds": {
+"tier": "S",
+"rang": 7,
+"score": 84.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 22,
+"score": 74.5,
+"item": "Armure de Warmog",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 12,
+"score": 69.3,
+"item": "Armure de Warmog",
+"rune": "Tempo mortel"
+}
+},
+"AkaliUR": {
+"src": "Worlds · HLE",
+"worlds": {
+"tier": "S",
+"rang": 8,
+"score": 83.5,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 2,
+"score": 89.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "S",
+"rang": 4,
+"score": 72.4,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"BardUR": {
+"src": "Worlds · T1",
+"worlds": {
+"tier": "S",
+"rang": 9,
+"score": 83.3,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 6,
+"score": 85.2,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "D",
+"rang": 68,
+"score": 62.7,
+"item": "Bottes de rapidité",
+"rune": "Aery"
+}
+},
+"JayceUR": {
+"src": "Worlds · HLE",
+"worlds": {
+"tier": "S",
+"rang": 10,
+"score": 83.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 20,
+"score": 77.2,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "B",
+"rang": 29,
+"score": 67.8,
+"item": "Lame d'infini",
+"rune": "Tempo mortel"
+}
+},
+"JaxUR": {
+"src": "Worlds · Bilibili Gaming",
+"worlds": {
+"tier": "A",
+"rang": 11,
+"score": 82.3,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 21,
+"score": 75.2,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 20,
+"score": 68.4,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"ZeriUR": {
+"src": "Worlds · T1",
+"worlds": {
+"tier": "A",
+"rang": 12,
+"score": 82.1,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 15,
+"score": 78.8,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "A",
+"rang": 21,
+"score": 68.4,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+}
+},
+"NidaleeUR": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "A",
+"rang": 13,
+"score": 81.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 7,
+"score": 85.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "S",
+"rang": 10,
+"score": 69.6,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"XayahUR": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "A",
+"rang": 14,
+"score": 79.3,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 8,
+"score": 84.5,
+"item": "Bottes de rapidité",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "B",
+"rang": 26,
+"score": 68.0,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Ambessa": {
+"src": "Worlds · HLE",
+"worlds": {
+"tier": "A",
+"rang": 15,
+"score": 78.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 32,
+"score": 69.2,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 38,
+"score": 66.7,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"AatroxUR": {
+"src": "Pack UR",
+"worlds": {
+"tier": "A",
+"rang": 16,
+"score": 78.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 27,
+"score": 70.5,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "B",
+"rang": 33,
+"score": 67.5,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"LuxUR": {
+"src": "Pack UR",
+"worlds": {
+"tier": "A",
+"rang": 17,
+"score": 78.4,
+"item": "Danseur fantôme",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 13,
+"score": 79.0,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 48,
+"score": 65.6,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"MaokaiUR": {
+"src": "Pack UR",
+"worlds": {
+"tier": "A",
+"rang": 18,
+"score": 78.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 53,
+"score": 58.0,
+"item": "Bottes de rapidité",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "B",
+"rang": 37,
+"score": 66.9,
+"item": "Bottes de rapidité",
+"rune": "Aery"
+}
+},
+"MissFortune": {
+"src": "Worlds · G2 Esports / LEC · NAVI",
+"worlds": {
+"tier": "A",
+"rang": 19,
+"score": 77.7,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "S",
+"rang": 10,
+"score": 81.0,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 55,
+"score": 64.2,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"VayneUR": {
+"src": "Pack UR",
+"worlds": {
+"tier": "A",
+"rang": 20,
+"score": 77.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 40,
+"score": 63.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 18,
+"score": 68.4,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"XinZhaoUR": {
+"src": "LEC · Movistar KOI",
+"worlds": {
+"tier": "A",
+"rang": 21,
+"score": 76.8,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 25,
+"score": 71.2,
+"item": "Lame d'infini",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 31,
+"score": 67.6,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+}
+},
+"KSante": {
+"src": "Worlds · G2 Esports / LEC · GIANTX",
+"worlds": {
+"tier": "A",
+"rang": 22,
+"score": 76.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 46,
+"score": 61.0,
+"item": "Ange gardien",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "A",
+"rang": 16,
+"score": 68.7,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"TristanaUR": {
+"src": "Pack UR / Worlds · G2 Esports",
+"worlds": {
+"tier": "A",
+"rang": 23,
+"score": 76.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 26,
+"score": 71.0,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "S",
+"rang": 2,
+"score": 75.3,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"GragasUR": {
+"src": "LEC · Los Ratones",
+"worlds": {
+"tier": "B",
+"rang": 24,
+"score": 76.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 39,
+"score": 64.2,
+"item": "Ange gardien",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "S",
+"rang": 5,
+"score": 71.8,
+"item": "Ange gardien",
+"rune": "Aery"
+}
+},
+"Zed": {
+"src": "Packs / LEC · Team Vitality",
+"worlds": {
+"tier": "B",
+"rang": 25,
+"score": 76.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 12,
+"score": 80.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 24,
+"score": 68.0,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Chogath": {
+"src": "LEC · Los Ratones",
+"worlds": {
+"tier": "B",
+"rang": 26,
+"score": 75.6,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 55,
+"score": 57.5,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "B",
+"rang": 32,
+"score": 67.6,
+"item": "Ange gardien",
+"rune": "Aery"
+}
+},
+"LeeSin": {
+"src": "Worlds · Gen.G / Worlds · T1 / LEC · Movistar KOI",
+"worlds": {
+"tier": "B",
+"rang": 27,
+"score": 75.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 17,
+"score": 77.8,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 41,
+"score": 66.7,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Leona": {
+"src": "Packs",
+"worlds": {
+"tier": "B",
+"rang": 28,
+"score": 75.2,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 59,
+"score": 55.2,
+"item": "Ange gardien",
+"rune": "Aery"
+},
+"boss": {
+"tier": "C",
+"rang": 58,
+"score": 64.2,
+"item": "Ange gardien",
+"rune": "Gardien"
+}
+},
+"Leblanc": {
+"src": "Worlds · Invictus Gaming / LEC · Movistar KOI",
+"worlds": {
+"tier": "B",
+"rang": 29,
+"score": 75.2,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 23,
+"score": 73.0,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "B",
+"rang": 25,
+"score": 68.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"SennaUR": {
+"src": "Pack UR",
+"worlds": {
+"tier": "B",
+"rang": 30,
+"score": 75.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 43,
+"score": 62.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "S",
+"rang": 8,
+"score": 70.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Corki": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "B",
+"rang": 31,
+"score": 74.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 18,
+"score": 77.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "A",
+"rang": 23,
+"score": 68.0,
+"item": "Ange gardien",
+"rune": "Comète arcanique"
+}
+},
+"Yone": {
+"src": "Worlds · G2 Esports / Worlds · HLE / LEC · GIANTX",
+"worlds": {
+"tier": "B",
+"rang": 32,
+"score": 74.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 16,
+"score": 78.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 54,
+"score": 64.4,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Graves": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "B",
+"rang": 33,
+"score": 74.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 50,
+"score": 59.2,
+"item": "Ange gardien",
+"rune": "Poigne de l'immortel"
+},
+"boss": {
+"tier": "B",
+"rang": 28,
+"score": 67.8,
+"item": "Ange gardien",
+"rune": "Aery"
+}
+},
+"GarenUR": {
+"src": "Pack UR",
+"worlds": {
+"tier": "B",
+"rang": 34,
+"score": 74.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 28,
+"score": 70.2,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 36,
+"score": 66.9,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Thresh": {
+"src": "Worlds · T1",
+"worlds": {
+"tier": "B",
+"rang": 35,
+"score": 74.3,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 38,
+"score": 64.5,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "S",
+"rang": 6,
+"score": 71.6,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"XinZhao": {
+"src": "Worlds · T1",
+"worlds": {
+"tier": "B",
+"rang": 36,
+"score": 74.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 31,
+"score": 69.5,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 39,
+"score": 66.7,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Ashe": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "B",
+"rang": 37,
+"score": 73.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 51,
+"score": 59.2,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 45,
+"score": 66.2,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Galio": {
+"src": "Packs",
+"worlds": {
+"tier": "B",
+"rang": 38,
+"score": 73.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 44,
+"score": 62.5,
+"item": "Ange gardien",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "S",
+"rang": 9,
+"score": 70.0,
+"item": "Ange gardien",
+"rune": "Aery"
+}
+},
+"Rumble": {
+"src": "Worlds · Karmine Corp",
+"worlds": {
+"tier": "B",
+"rang": 39,
+"score": 73.5,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 33,
+"score": 68.5,
+"item": "Bottes de rapidité",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 52,
+"score": 65.1,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Camille": {
+"src": "Worlds · Bilibili Gaming",
+"worlds": {
+"tier": "B",
+"rang": 40,
+"score": 73.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 62,
+"score": 53.5,
+"item": "Cotte épineuse",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 78,
+"score": 60.7,
+"item": "Cotte épineuse",
+"rune": "Tempo mortel"
+}
+},
+"Talon": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 41,
+"score": 73.2,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 37,
+"score": 65.2,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 43,
+"score": 66.4,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Jhin": {
+"src": "Worlds · HLE / LEC · Team Vitality",
+"worlds": {
+"tier": "C",
+"rang": 42,
+"score": 73.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 19,
+"score": 77.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "A",
+"rang": 11,
+"score": 69.6,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Zeri": {
+"src": "Worlds · Gen.G",
+"worlds": {
+"tier": "C",
+"rang": 43,
+"score": 72.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 36,
+"score": 68.0,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "D",
+"rang": 69,
+"score": 62.7,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Rakan": {
+"src": "LEC · Los Ratones",
+"worlds": {
+"tier": "C",
+"rang": 44,
+"score": 72.3,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "A",
+"rang": 11,
+"score": 80.2,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 19,
+"score": 68.4,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Fiora": {
+"src": "Worlds · Invictus Gaming",
+"worlds": {
+"tier": "C",
+"rang": 45,
+"score": 72.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 48,
+"score": 60.8,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 51,
+"score": 65.3,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Yasuo": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 46,
+"score": 72.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 29,
+"score": 70.0,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 15,
+"score": 68.9,
+"item": "Bottes de rapidité",
+"rune": "Conquérant"
+}
+},
+"Darius": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 47,
+"score": 72.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 64,
+"score": 53.0,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "B",
+"rang": 27,
+"score": 67.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Vayne": {
+"src": "Packs / LEC · Team Vitality",
+"worlds": {
+"tier": "C",
+"rang": 48,
+"score": 71.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 34,
+"score": 68.2,
+"item": "Bottes de rapidité",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "B",
+"rang": 30,
+"score": 67.6,
+"item": "Bottes de rapidité",
+"rune": "Conquérant"
+}
+},
+"Gwen": {
+"src": "Worlds · Bilibili Gaming / LEC · Team Vitality",
+"worlds": {
+"tier": "C",
+"rang": 49,
+"score": 71.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 74,
+"score": 50.0,
+"item": "Cotte épineuse",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "D",
+"rang": 70,
+"score": 62.4,
+"item": "Cotte épineuse",
+"rune": "Conquérant"
+}
+},
+"Aatrox": {
+"src": "Packs / LEC · Team Vitality",
+"worlds": {
+"tier": "C",
+"rang": 50,
+"score": 70.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 61,
+"score": 54.2,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "B",
+"rang": 40,
+"score": 66.7,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Renata": {
+"src": "Worlds · T1",
+"worlds": {
+"tier": "C",
+"rang": 51,
+"score": 70.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 47,
+"score": 61.0,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "B",
+"rang": 34,
+"score": 67.3,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"Sejuani": {
+"src": "Packs / LEC · Movistar KOI",
+"worlds": {
+"tier": "C",
+"rang": 52,
+"score": 70.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 52,
+"score": 59.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "D",
+"rang": 64,
+"score": 63.8,
+"item": "Ange gardien",
+"rune": "Aery"
+}
+},
+"Gangplank": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 53,
+"score": 70.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 60,
+"score": 54.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "D",
+"rang": 75,
+"score": 60.9,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Senna": {
+"src": "Packs / LEC · GIANTX",
+"worlds": {
+"tier": "C",
+"rang": 54,
+"score": 70.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 35,
+"score": 68.0,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 22,
+"score": 68.2,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Ziggs": {
+"src": "Worlds · HLE",
+"worlds": {
+"tier": "C",
+"rang": 55,
+"score": 70.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 49,
+"score": 60.0,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "D",
+"rang": 72,
+"score": 62.0,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"Jinx": {
+"src": "Packs / LEC · Movistar KOI",
+"worlds": {
+"tier": "C",
+"rang": 56,
+"score": 70.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 68,
+"score": 52.8,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "D",
+"rang": 63,
+"score": 63.8,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Karthus": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 57,
+"score": 69.3,
+"item": "Lame d'infini",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 58,
+"score": 56.0,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 56,
+"score": 64.2,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"Ezreal": {
+"src": "Worlds · Invictus Gaming / Worlds · Bilibili Gaming / LEC · GIANTX",
+"worlds": {
+"tier": "C",
+"rang": 58,
+"score": 69.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 57,
+"score": 56.2,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 87,
+"score": 58.2,
+"item": "Lame d'infini",
+"rune": "Conquérant"
+}
+},
+"Lux": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 59,
+"score": 69.2,
+"item": "Danseur fantôme",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 45,
+"score": 62.2,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "D",
+"rang": 66,
+"score": 63.1,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Syndra": {
+"src": "Worlds · Invictus Gaming / Worlds · G2 Esports / Worlds · Bilibili Gaming / LEC · NAVI",
+"worlds": {
+"tier": "C",
+"rang": 60,
+"score": 68.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 24,
+"score": 73.0,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 14,
+"score": 68.9,
+"item": "Bottes de rapidité",
+"rune": "Conquérant"
+}
+},
+"Zilean": {
+"src": "Packs",
+"worlds": {
+"tier": "C",
+"rang": 61,
+"score": 68.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 67,
+"score": 52.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "A",
+"rang": 13,
+"score": 69.3,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Aphelios": {
+"src": "Worlds · Bilibili Gaming / Worlds · T1",
+"worlds": {
+"tier": "D",
+"rang": 62,
+"score": 68.0,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 54,
+"score": 57.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 59,
+"score": 64.0,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Renekton": {
+"src": "LEC · GIANTX",
+"worlds": {
+"tier": "D",
+"rang": 63,
+"score": 67.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 66,
+"score": 53.0,
+"item": "Armure de Warmog",
+"rune": "Poigne de l'immortel"
+},
+"boss": {
+"tier": "D",
+"rang": 67,
+"score": 62.9,
+"item": "Armure de Warmog",
+"rune": "Aery"
+}
+},
+"Jax": {
+"src": "LEC · Team Vitality",
+"worlds": {
+"tier": "D",
+"rang": 64,
+"score": 67.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 73,
+"score": 50.2,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 88,
+"score": 54.9,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Braum": {
+"src": "Packs",
+"worlds": {
+"tier": "D",
+"rang": 65,
+"score": 67.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 77,
+"score": 49.2,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 50,
+"score": 65.5,
+"item": "Ange gardien",
+"rune": "Gardien"
+}
+},
+"Draven": {
+"src": "Worlds · Karmine Corp / Worlds · G2 Esports / LEC · NAVI",
+"worlds": {
+"tier": "D",
+"rang": 66,
+"score": 67.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 42,
+"score": 63.2,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 47,
+"score": 66.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Kaisa": {
+"src": "Worlds · Invictus Gaming / Worlds · Bilibili Gaming / Worlds · T1 / LEC · GIANTX / LEC · Team Vitality",
+"worlds": {
+"tier": "D",
+"rang": 67,
+"score": 66.5,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 72,
+"score": 50.2,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "C",
+"rang": 46,
+"score": 66.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Janna": {
+"src": "Packs / LEC · Los Ratones",
+"worlds": {
+"tier": "D",
+"rang": 68,
+"score": 66.4,
+"item": "Armure de Warmog",
+"rune": null
+},
+"pvp": {
+"tier": "B",
+"rang": 30,
+"score": 69.5,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "S",
+"rang": 3,
+"score": 73.1,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Ornn": {
+"src": "Worlds · G2 Esports",
+"worlds": {
+"tier": "D",
+"rang": 69,
+"score": 65.5,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 76,
+"score": 49.8,
+"item": "Armure de Warmog",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "D",
+"rang": 73,
+"score": 62.0,
+"item": "Armure de Warmog",
+"rune": "Gardien"
+}
+},
+"Sion": {
+"src": "LEC · Los Ratones",
+"worlds": {
+"tier": "D",
+"rang": 70,
+"score": 64.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 79,
+"score": 49.0,
+"item": "Armure de Warmog",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "E",
+"rang": 80,
+"score": 60.4,
+"item": "Armure de Warmog",
+"rune": "Gardien"
+}
+},
+"Malphite": {
+"src": "Packs",
+"worlds": {
+"tier": "D",
+"rang": 71,
+"score": 64.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 75,
+"score": 50.0,
+"item": "Ange gardien",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "E",
+"rang": 83,
+"score": 59.4,
+"item": "Ange gardien",
+"rune": "Optimisation glaciale"
+}
+},
+"Qiyana": {
+"src": "Worlds · Karmine Corp",
+"worlds": {
+"tier": "D",
+"rang": 72,
+"score": 64.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 78,
+"score": 49.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 92,
+"score": 53.1,
+"item": "Ange gardien",
+"rune": "Comète arcanique"
+}
+},
+"Khazix": {
+"src": "Worlds · Karmine Corp / LEC · NAVI / LEC · Team Vitality",
+"worlds": {
+"tier": "D",
+"rang": 73,
+"score": 63.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 90,
+"score": 42.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "C",
+"rang": 61,
+"score": 64.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Shaco": {
+"src": "Packs / LEC · Los Ratones",
+"worlds": {
+"tier": "D",
+"rang": 74,
+"score": 63.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 63,
+"score": 53.5,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "D",
+"rang": 76,
+"score": 60.9,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Vi": {
+"src": "Packs / LEC · NAVI",
+"worlds": {
+"tier": "D",
+"rang": 75,
+"score": 60.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 80,
+"score": 47.8,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 93,
+"score": 52.7,
+"item": "Ange gardien",
+"rune": "Aery"
+}
+},
+"Akali": {
+"src": "LEC · GIANTX",
+"worlds": {
+"tier": "D",
+"rang": 76,
+"score": 59.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 41,
+"score": 63.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "D",
+"rang": 65,
+"score": 63.6,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Orianna": {
+"src": "Worlds · Invictus Gaming / LEC · NAVI / LEC · Movistar KOI",
+"worlds": {
+"tier": "E",
+"rang": 77,
+"score": 59.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 85,
+"score": 44.5,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 100,
+"score": 34.7,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"Tryndamere": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 78,
+"score": 59.5,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 86,
+"score": 44.5,
+"item": "Ange gardien",
+"rune": "Poigne de l'immortel"
+},
+"boss": {
+"tier": "E",
+"rang": 77,
+"score": 60.9,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Gnar": {
+"src": "Worlds · Karmine Corp / LEC · GIANTX",
+"worlds": {
+"tier": "E",
+"rang": 79,
+"score": 59.3,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 83,
+"score": 45.5,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 79,
+"score": 60.5,
+"item": "Ange gardien",
+"rune": "Gardien"
+}
+},
+"Blitzcrank": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 80,
+"score": 59.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 82,
+"score": 47.0,
+"item": "Ange gardien",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "D",
+"rang": 74,
+"score": 61.3,
+"item": "Ange gardien",
+"rune": "Gardien"
+}
+},
+"Amumu": {
+"src": "Packs / LEC · Team Vitality",
+"worlds": {
+"tier": "E",
+"rang": 81,
+"score": 58.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 87,
+"score": 44.0,
+"item": "Ange gardien",
+"rune": "Gardien"
+},
+"boss": {
+"tier": "E",
+"rang": 81,
+"score": 59.8,
+"item": "Ange gardien",
+"rune": "Optimisation glaciale"
+}
+},
+"Jayce": {
+"src": "Worlds · Karmine Corp / Worlds · Invictus Gaming",
+"worlds": {
+"tier": "E",
+"rang": 82,
+"score": 56.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 91,
+"score": 42.5,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "E",
+"rang": 85,
+"score": 58.7,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"MasterYi": {
+"src": "Packs / LEC · Los Ratones",
+"worlds": {
+"tier": "E",
+"rang": 83,
+"score": 56.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "C",
+"rang": 56,
+"score": 56.2,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "C",
+"rang": 57,
+"score": 64.2,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Teemo": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 84,
+"score": 55.9,
+"item": "Bottes de rapidité",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 69,
+"score": 52.0,
+"item": "Lame d'infini",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 99,
+"score": 41.1,
+"item": "Lame d'infini",
+"rune": "Aery"
+}
+},
+"Sylas": {
+"src": "Worlds · G2 Esports / Worlds · Bilibili Gaming / Worlds · HLE / LEC · GIANTX",
+"worlds": {
+"tier": "E",
+"rang": 85,
+"score": 55.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 89,
+"score": 42.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 49,
+"score": 65.6,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Nidalee": {
+"src": "LEC · NAVI",
+"worlds": {
+"tier": "E",
+"rang": 86,
+"score": 55.6,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 65,
+"score": 53.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 86,
+"score": 58.4,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Garen": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 87,
+"score": 55.1,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 81,
+"score": 47.0,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "E",
+"rang": 82,
+"score": 59.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+}
+},
+"Viego": {
+"src": "Worlds · Karmine Corp / LEC · Los Ratones",
+"worlds": {
+"tier": "E",
+"rang": 88,
+"score": 54.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 96,
+"score": 35.2,
+"item": "Armure de Warmog",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 90,
+"score": 53.8,
+"item": "Armure de Warmog",
+"rune": "Gardien"
+}
+},
+"Varus": {
+"src": "LEC · Movistar KOI",
+"worlds": {
+"tier": "E",
+"rang": 89,
+"score": 54.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 70,
+"score": 51.2,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 91,
+"score": 53.3,
+"item": "Bottes de rapidité",
+"rune": "Tempo mortel"
+}
+},
+"Nasus": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 90,
+"score": 53.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 88,
+"score": 42.8,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 60,
+"score": 64.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Caitlyn": {
+"src": "Packs / LEC · NAVI",
+"worlds": {
+"tier": "E",
+"rang": 91,
+"score": 50.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 94,
+"score": 38.2,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "E",
+"rang": 94,
+"score": 52.2,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Sivir": {
+"src": "LEC · Los Ratones",
+"worlds": {
+"tier": "E",
+"rang": 92,
+"score": 50.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 98,
+"score": 31.2,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 96,
+"score": 49.1,
+"item": "Danseur fantôme",
+"rune": "Conquérant"
+}
+},
+"Sona": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 93,
+"score": 50.0,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 84,
+"score": 44.5,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "C",
+"rang": 53,
+"score": 65.1,
+"item": "Danseur fantôme",
+"rune": "Tempo mortel"
+}
+},
+"Xayah": {
+"src": "Worlds · Invictus Gaming",
+"worlds": {
+"tier": "E",
+"rang": 94,
+"score": 46.8,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "D",
+"rang": 71,
+"score": 50.8,
+"item": "Ange gardien",
+"rune": "Moisson noire"
+},
+"boss": {
+"tier": "D",
+"rang": 71,
+"score": 62.4,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Nami": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 95,
+"score": 45.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 93,
+"score": 40.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 89,
+"score": 54.7,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Morgana": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 96,
+"score": 44.4,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 99,
+"score": 30.5,
+"item": "Cotte épineuse",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 98,
+"score": 44.0,
+"item": "Cotte épineuse",
+"rune": "Gardien"
+}
+},
+"Kalista": {
+"src": "Worlds · Karmine Corp / Worlds · G2 Esports / LEC · Movistar KOI",
+"worlds": {
+"tier": "E",
+"rang": 97,
+"score": 43.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 100,
+"score": 26.5,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 97,
+"score": 49.1,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Veigar": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 98,
+"score": 43.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 95,
+"score": 37.8,
+"item": "Ange gardien",
+"rune": "Conquérant"
+},
+"boss": {
+"tier": "E",
+"rang": 84,
+"score": 58.9,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+},
+"Annie": {
+"src": "Packs / LEC · NAVI",
+"worlds": {
+"tier": "E",
+"rang": 99,
+"score": 43.7,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 97,
+"score": 33.5,
+"item": "Lame d'infini",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "E",
+"rang": 95,
+"score": 50.9,
+"item": "Lame d'infini",
+"rune": "Optimisation glaciale"
+}
+},
+"Soraka": {
+"src": "Packs",
+"worlds": {
+"tier": "E",
+"rang": 100,
+"score": 39.9,
+"item": "Ange gardien",
+"rune": null
+},
+"pvp": {
+"tier": "E",
+"rang": 92,
+"score": 40.5,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+},
+"boss": {
+"tier": "D",
+"rang": 62,
+"score": 64.0,
+"item": "Ange gardien",
+"rune": "Tempo mortel"
+}
+}
+}

@@ -1,0 +1,9 @@
+# Copie ce fichier en « .env » (dans ce même dossier) et remplis-le.
+# Tu peux reprendre la même application Discord que pour l'Activité.
+# Le SECRET ne se montre à personne, comme le token du bot.
+DISCORD_CLIENT_ID=colle_ici_l_application_id
+DISCORD_CLIENT_SECRET=colle_ici_le_client_secret
+SERVEUR_ID=100000000000000007
+PORT=8081
+# Changements depuis le site (équipe, items, runes) : oui ou non. Avec « non », le site ne fait que lire.
+ECRITURE=oui

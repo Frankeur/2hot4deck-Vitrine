@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>2Hot4Deck</title>
+<meta name="description" content="2Hot4Deck : le jeu de cartes League of Legends du serveur Discord. Les cartes, le classement, et ta collection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="haut">
+  <div class="haut-in">
+    <a class="logo" href="#" aria-label="2Hot4Deck, accueil"><img src="/static/logo_petit.webp" alt="2Hot4Deck"></a>
+    <nav aria-label="Pages">
+      <a href="#" data-vue="accueil">Accueil</a>
+      <a href="#cartes" data-vue="cartes">Cartes</a>
+      <a href="#tour" data-vue="pve">PvE</a>
+      <a href="#classement" data-vue="classement">Classement</a>
+      <a href="#collection" data-vue="collection">Ma collection</a>
+      <a href="#packs" data-vue="packs">Mes packs</a>
+    </nav>
+    <div id="compte" class="compte"></div>
+  </div>
+</header>
+
+<main>
+  <!-- Accueil (public) -->
+  <section id="v-accueil" class="vue">
+    <div class="hero">
+      <img class="hero-fond" src="/img/banniere_worlds.jpg" alt="">
+      <canvas class="braises" id="braises" aria-hidden="true"></canvas>
+      <div class="hero-in">
+        <div class="hero-texte">
+          <h1 class="hero-logo"><img src="/static/logo.webp" alt="2Hot4Deck"></h1>
+          <p class="devise">Collectionne · Affronte · Domine</p>
+          <p class="chapo">Le jeu de cartes de la Faille, sur Discord. Ouvre tes packs, monte tes champions jusqu'au niveau 100, et grimpe jusqu'à la grande finale des Worlds contre Faker.</p>
+          <div class="actions" id="hero-actions"></div>
+        </div>
+        <div class="eventail" id="vitrine" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="salle">
+    <nav class="tuiles" aria-label="Rubriques">
+      <a href="#collection" aria-label="Collection : cartes et joueurs"><img src="/static/tuile_collection.webp" alt=""></a>
+      <a href="#packs" aria-label="Boutique : tes packs à ouvrir"><img src="/static/tuile_boutique.webp" alt=""></a>
+      <a href="#classement" aria-label="Classements : joueurs et équipes"><img src="/static/tuile_classements.webp" alt=""></a>
+      <a href="#classement" aria-label="Communauté : discussions et événements"><img src="/static/tuile_communaute.webp" alt=""></a>
+    </nav>
+
+    <div class="panneaux">
+      <section class="panneau">
+        <div class="panneau-tete"><h2>Les packs</h2><a href="#packs">Mes packs →</a></div>
+        <div class="packs" id="packs"></div>
+      </section>
+      <section class="panneau">
+        <div class="panneau-tete"><h2>Cartes à la une</h2><a href="#cartes">Voir tout →</a></div>
+        <div class="une" id="une"></div>
+      </section>
+      <section class="panneau">
+        <div class="panneau-tete"><h2>Classement</h2><a href="#classement">Voir le classement →</a></div>
+        <ol class="mini-classe" id="mini-classe"></ol>
+      </section>
+    </div>
+    </div>
+  </section>
+
+  <!-- Toutes les cartes (public) -->
+  <section id="v-cartes" class="vue page" hidden>
+    <div class="titre-page">
+      <h1>Les cartes</h1>
+      <p class="chapo">Toutes les cartes qu'on peut obtenir, au niveau maximum. Clique sur une carte pour voir son kit, son meilleur item et sa place dans la tier list.</p>
+    </div>
+    <div class="onglets" id="c-onglets" role="tablist" aria-label="Les cartes">
+      <button role="tab" data-cv="cartes" aria-selected="true">Toutes les cartes</button>
+      <button role="tab" data-cv="tirages" aria-selected="false">Derniers tirages</button>
+    </div>
+    <div id="cv-tirages" hidden></div>
+    <div id="cv-cartes">
+    <div class="filtres">
+      <input id="c-q" type="search" placeholder="Chercher une carte, une région, un rôle…" aria-label="Chercher une carte">
+      <select id="c-tri" aria-label="Trier">
+        <option value="rarete">Trier par rareté</option>
+        <option value="worlds">Meilleures aux Worlds</option>
+        <option value="pvp">Meilleures en PvP</option>
+        <option value="boss">Meilleures contre les boss</option>
+        <option value="nom">Trier par nom</option>
+      </select>
+      <div id="c-puces" class="puces"></div>
+    </div>
+    <div id="c-nb" class="nb"></div>
+    <div id="c-grille" class="grille"></div>
+    </div>
+  </section>
+
+  <!-- Classement (public) -->
+  <section id="v-classement" class="vue page" hidden>
+    <div class="titre-page">
+      <h1>Classement</h1>
+      <p class="chapo">Les joueurs du serveur. Clique sur un joueur pour voir son profil.</p>
+    </div>
+    <div class="onglets" id="k-onglets" role="tablist" aria-label="Classer par"></div>
+    <ol id="k-liste" class="classement"></ol>
+  </section>
+
+  <!-- Profil d'un joueur (public) -->
+  <section id="v-joueur" class="vue page" hidden>
+    <div id="j-contenu"></div>
+  </section>
+
+  <!-- La tour (connecté) -->
+  <section id="v-tour" class="vue page" hidden>
+    <div class="titre-page">
+      <h1>La tour</h1>
+      <p class="chapo">Monte les étages un par un avec ton équipe. Le combat se joue tout seul : regarde tes champions se battre, puis récupère tes récompenses.</p>
+    </div>
+    <nav class="onglets onglets-pve" aria-label="Modes PvE"><a href="#tour" data-pve="tour">La tour</a><a href="#donjons" data-pve="donjons">Les donjons</a><a href="#jungle" data-pve="jungle">La jungle</a></nav>
+    <div id="t-contenu"></div>
+  </section>
+
+  <section id="v-donjons" class="vue page" hidden>
+    <div class="titre-page">
+      <h1>Les donjons</h1>
+      <p class="chapo">Bats les gardiens de Noxus, de Demacia et de Piltover pour gagner les composants de la forge. Une défaite ne coûte rien.</p>
+    </div>
+    <nav class="onglets onglets-pve" aria-label="Modes PvE"><a href="#tour" data-pve="tour">La tour</a><a href="#donjons" data-pve="donjons">Les donjons</a><a href="#jungle" data-pve="jungle">La jungle</a></nav>
+    <div id="dj-contenu"></div>
+  </section>
+
+  <section id="v-jungle" class="vue page" hidden>
+    <div class="titre-page">
+      <h1>La jungle</h1>
+      <p class="chapo">Fouille les buissons, nettoie les camps, place ton Châtiment sur le Bleu et le Rouge… et méfie-toi des ganks qui rôdent.</p>
+    </div>
+    <nav class="onglets onglets-pve" aria-label="Modes PvE"><a href="#tour" data-pve="tour">La tour</a><a href="#donjons" data-pve="donjons">Les donjons</a><a href="#jungle" data-pve="jungle">La jungle</a></nav>
+    <div id="j-jungle"></div>
+  </section>
+
+  <!-- Mes packs (connecté) -->
+  <section id="v-packs" class="vue page" hidden>
+    <div class="titre-page">
+      <h1>Mes packs</h1>
+      <p class="chapo">Ouvre tes packs un par un ou plusieurs d'un coup. Ce sont les mêmes packs, les mêmes taux et les mêmes garanties que sur Discord.</p>
+    </div>
+    <div id="p-contenu"></div>
+  </section>
+
+  <!-- Ma collection (connecté) -->
+  <section id="v-collection" class="vue page" hidden>
+    <div id="message" class="message" hidden></div>
+    <div id="fiche" hidden>
+      <div class="profil">
+        <img id="avatar" class="avatar" alt="" hidden>
+        <div>
+          <h1 id="pseudo"></h1>
+          <div class="stats" id="stats"></div>
+        </div>
+      </div>
+      <div class="onglets" id="col-onglets" role="tablist" aria-label="Ma collection">
+        <button role="tab" data-v="cartes" aria-selected="true">Mes cartes</button>
+        <button role="tab" data-v="equip" aria-selected="false">Équipe &amp; équipement</button>
+        <button role="tab" data-v="forge" aria-selected="false">La forge</button>
+      </div>
+      <div id="vue-equip" hidden></div>
+      <div id="vue-forge" hidden></div>
+      <div id="vue-cartes">
+      <div class="filtres">
+        <input id="q" type="search" placeholder="Chercher une carte, une région, un rôle…" aria-label="Chercher dans ma collection">
+        <select id="tri" aria-label="Trier">
+          <option value="rarete">Trier par rareté</option>
+          <option value="niveau">Trier par niveau</option>
+          <option value="force">Trier par puissance</option>
+          <option value="worlds">Meilleures aux Worlds</option>
+          <option value="nom">Trier par nom</option>
+        </select>
+        <div id="puces" class="puces"></div>
+      </div>
+      <div id="nb" class="nb"></div>
+      <div id="grille" class="grille"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="choix" aria-labelledby="choix-titre" class="choix-dlg">
+  <button class="fermer" id="choix-fermer" aria-label="Fermer">✕</button>
+  <h2 id="choix-titre">Ajouter une carte à ton équipe</h2>
+  <input id="choix-q" type="search" placeholder="Chercher une carte…" aria-label="Chercher une carte">
+  <div id="choix-grille" class="grille petite"></div>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<div id="chat" class="chat" hidden>
+  <button class="chat-bouton" id="chat-bouton" aria-expanded="false" aria-controls="chat-panneau" aria-label="Ouvrir le chat">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+    <span class="chat-pastille" id="chat-pastille" hidden></span>
+  </button>
+  <section class="chat-panneau" id="chat-panneau" aria-label="Chat et messages" hidden>
+    <header>
+      <div class="chat-onglets" role="tablist" aria-label="Chat">
+        <button role="tab" data-co="general" aria-selected="true">Général</button>
+        <button role="tab" data-co="mp" aria-selected="false">Messages <span class="chat-mini" id="mp-pastille" hidden></span></button>
+      </div>
+      <button class="chat-fermer" id="chat-fermer" aria-label="Fermer le chat">✕</button>
+    </header>
+    <div class="chat-vue" id="chat-general">
+      <ol class="chat-fil" id="chat-fil" aria-live="polite"></ol>
+      <form class="chat-saisie" id="chat-form"><input id="chat-texte" maxlength="300" autocomplete="off" placeholder="Écris à tout le monde…" aria-label="Ton message pour tous"><button type="submit">Envoyer</button></form>
+    </div>
+    <div class="chat-vue" id="chat-mp" hidden>
+      <div id="mp-liste" class="mp-liste"></div>
+      <div id="mp-conv" class="mp-conv" hidden>
+        <div class="mp-tete"><button id="mp-retour" aria-label="Retour à mes messages">←</button><a id="mp-qui" href="#"></a></div>
+        <ol class="chat-fil" id="mp-fil" aria-live="polite"></ol>
+        <form class="chat-saisie" id="mp-form"><input id="mp-texte" maxlength="500" autocomplete="off" placeholder="Ton message privé…" aria-label="Ton message privé"><button type="submit">Envoyer</button></form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<dialog id="arene" class="arene" aria-label="Combat de la tour">
+  <div class="ar-haut">
+    <div class="ar-titre" id="ar-titre"></div>
+    <div class="ar-vitesse" role="group" aria-label="Vitesse du combat">
+      <button type="button" data-v="1" aria-pressed="true">x1</button><button type="button" data-v="2" aria-pressed="false">x2</button><button type="button" data-v="4" aria-pressed="false">x4</button>
+      <button type="button" data-v="fin">Passer</button>
+    </div>
+  </div>
+  <div class="ar-scene">
+    <div class="ar-camp ennemis" id="ar-ennemis"></div>
+    <div class="ar-milieu"><div class="ar-panneau" id="ar-panneau">
+      <p class="ar-ulti" id="ar-banniere"><span>Le combat commence</span></p>
+      <ol class="ar-fil" id="ar-fil" aria-live="polite"></ol>
+    </div></div>
+    <div class="ar-camp joueurs" id="ar-joueurs"></div>
+  </div>
+  <div class="ar-fin" id="ar-fin" hidden></div>
+</dialog>
+
+<dialog id="ouverture" class="ouverture" aria-label="Ouverture d'un pack">
+  <div class="ouv-scene" id="ouv-scene" aria-live="polite"></div>
+  <div class="ouv-actions" id="ouv-actions"></div>
+</dialog>
+
+<dialog id="detail" aria-labelledby="d-nom">
+  <button class="fermer" id="fermer" aria-label="Fermer">✕</button>
+  <div id="d-contenu"></div>
+</dialog>
+
+<footer class="bas">
+  <img src="/img/fond_combat.jpg" alt="">
+  <div class="bas-in">
+    <p class="bas-logo"><img src="/static/logo_petit.webp" alt="2Hot4Deck"></p>
+    <p>Projet de fans, non affilié à Riot Games. Les packs, l'équipe et l'équipement se gèrent ici comme sur Discord : c'est le même jeu.</p>
+  </div>
+</footer>
+<script src="/static/pixi.min.js"></script>
+<script src="/static/arene_pixi.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/jungle.js"></script>
+<script src="/static/braises.js"></script>
+</body>
+</html>

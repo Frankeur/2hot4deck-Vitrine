@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2Hot4Deck · un jeu de cartes Discord et web</title>
+<meta name="description" content="2Hot4Deck : un jeu de cartes à collectionner sur l'univers de League of Legends, jouable sur Discord et sur le web. Projet de fans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0D1A2B; --nuit-2:#14263B; --texte:#E9E2D0; --doux:#A9B4BF;
+  --or:#C8A15A; --hex:#3CC2B8; --sr:#9A7BE0; --ssr:#E0A23C; --ur:#D9534A; --lr:#F2E3B3;
+  --affiche:"Big Shoulders Display", "Arial Narrow", sans-serif;
+  --corps:"Literata", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{background:var(--nuit)}
+body{margin:0;background:radial-gradient(1200px 600px at 85% -10%, #1C3550 0%, transparent 60%), var(--nuit);
+  color:var(--texte);font:400 1.0625rem/1.7 var(--corps);-webkit-font-smoothing:antialiased}
+a{color:var(--hex);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--hex);outline-offset:3px;border-radius:4px}
+.page{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--affiche);font-weight:800;line-height:1;margin:0;letter-spacing:.01em}
+
+/* ---------- Accroche : le titre et une carte du jeu ---------- */
+.accroche{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:88px 0 72px}
+.accroche h1{font-size:clamp(4rem,11vw,8.5rem);font-weight:900;line-height:.86;color:var(--texte)}
+.accroche h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--or)}
+.accroche p{max-width:34em;margin:28px 0 0;color:var(--doux);font-size:1.125rem}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.bouton{display:inline-block;padding:12px 20px;border-radius:6px;font:600 1rem/1 var(--corps);text-decoration:none}
+.bouton.plein{background:var(--or);color:var(--nuit)}
+.bouton.creux{border:1px solid #3A5068;color:var(--texte)}
+.bouton:hover{filter:brightness(1.08)}
+
+.scene{perspective:900px;display:flex;justify-content:center}
+.carte{width:min(280px,100%);aspect-ratio:5/7;border-radius:14px;padding:12px;position:relative;
+  background:linear-gradient(150deg,#F7E7B6,#C8A15A 40%,#8C6A2F 70%,#F2E3B3);
+  box-shadow:0 30px 60px -20px #000c, 0 0 0 1px #F2E3B355;
+  transform:rotateY(-14deg) rotateX(6deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.carte:hover{transform:rotateY(0) rotateX(0)}
+.carte-in{height:100%;border-radius:8px;background:linear-gradient(180deg,#1A3149,#0D1A2B);display:flex;flex-direction:column;overflow:hidden}
+.carte-tete{display:flex;justify-content:space-between;align-items:baseline;padding:10px 12px 6px}
+.carte-tete b{font-family:var(--affiche);font-size:1.6rem;letter-spacing:.02em}
+.rarete{font-family:var(--affiche);font-weight:900;font-size:1.25rem;color:var(--lr)}
+.carte-image{flex:1;margin:0 10px;border-radius:6px;position:relative;overflow:hidden;
+  background:conic-gradient(from 210deg at 50% 60%,#3CC2B8,#1A3149,#9A7BE0,#1A3149,#3CC2B8)}
+.carte-image::after{content:"";position:absolute;inset:18%;border:2px solid #F2E3B3aa;transform:rotate(45deg);border-radius:6px}
+.carte-ulti{padding:10px 12px 4px;font-size:.8rem;line-height:1.45;color:var(--doux)}
+.carte-ulti strong{color:var(--texte)}
+.carte-stats{display:flex;justify-content:space-between;padding:6px 12px 12px;font-family:var(--affiche);font-size:1.15rem}
+.carte-stats span:first-child{color:#7FD48A}.carte-stats span:last-child{color:#F08A6E}
+
+/* ---------- Sections ---------- */
+section{padding:56px 0;border-top:1px solid #22384F}
+section h2{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--or);margin-bottom:28px}
+.colonnes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 48px}
+.mode h3{font-size:1.5rem;color:var(--texte);margin-bottom:4px}
+.mode p{margin:0 0 20px;color:var(--doux);max-width:32em}
+
+/* L'échelle des raretés : une vraie progression, de la plus commune à la plus rare */
+.echelle{display:flex;gap:6px;align-items:flex-end;margin:8px 0 18px;max-width:560px}
+.echelle div{flex:1;border-radius:6px 6px 2px 2px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;
+  font-family:var(--affiche);font-weight:900;font-size:1.3rem;color:var(--nuit)}
+.echelle div:nth-child(1){height:44px;background:#8D99A6}
+.echelle div:nth-child(2){height:62px;background:#5FA8D3}
+.echelle div:nth-child(3){height:82px;background:var(--sr)}
+.echelle div:nth-child(4){height:104px;background:var(--ssr)}
+.echelle div:nth-child(5){height:128px;background:var(--ur)}
+.echelle div:nth-child(6){height:156px;background:var(--lr)}
+.note{color:var(--doux);max-width:36em;margin:0}
+
+.tech{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 48px}
+.tech li{padding-left:18px;position:relative;color:var(--doux)}
+.tech li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;background:var(--hex);transform:rotate(45deg)}
+.tech strong{color:var(--texte);font-weight:600}
+
+footer{padding:40px 0 64px;border-top:1px solid #22384F;color:var(--doux);font-size:.95rem}
+footer p{margin:0 0 6px}
+
+@media (max-width:760px){
+  .accroche{grid-template-columns:1fr;gap:40px;padding:56px 0 48px}
+  .colonnes,.tech{grid-template-columns:1fr}
+  .carte{transform:none}
+}
+@media (prefers-reduced-motion:reduce){.carte{transition:none}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="accroche">
+    <div>
+      <h1>2Hot4<span>Deck</span></h1>
+      <p>Un jeu de cartes à collectionner sur l'univers de League of Legends. On ouvre des packs, on monte ses champions,
+        et on affronte une tour de 200 étages, des raids, d'autres joueurs et les équipes pros des Worlds. Il se joue sur Discord et sur le web.</p>
+      <div class="boutons">
+        <a class="bouton plein" href="https://discord.gg/D64RbA6bHa">Rejoindre le Discord</a>
+        <a class="bouton creux" href="https://2hot4deck.com">Jouer sur le site</a>
+        <a class="bouton creux" href="https://github.com/Frankeur/2hot4deck-Vitrine">Lire le code</a>
+      </div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <div class="carte">
+        <div class="carte-in">
+          <div class="carte-tete"><b>Le développeur</b><span class="rarete">LR</span></div>
+          <div class="carte-image"></div>
+          <p class="carte-ulti"><strong>Mise en prod :</strong> pousse sur GitHub, le serveur se met à jour seul et redémarre seulement ce qui a changé.</p>
+          <div class="carte-stats"><span>PV 20 000</span><span>ATQ 120</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Les cartes</h2>
+    <div class="echelle" role="img" aria-label="Les six raretés, de la plus commune à la plus rare : N, R, SR, SSR, UR et LR">
+      <div>N</div><div>R</div><div>SR</div><div>SSR</div><div>UR</div><div>LR</div>
+    </div>
+    <p class="note">Plus de 120 cartes : sbires, monstres de la jungle, champions, versions UR et cartes de joueurs pros à équiper comme coach.
+      Chaque carte a un rôle, une région et un ultime. Les combats se jouent seuls ; tout se décide dans l'équipe de trois, les items, les runes et le placement.</p>
+  </section>
+
+  <section>
+    <h2>Les modes</h2>
+    <div class="colonnes">
+      <div class="mode"><h3>La tour</h3><p>200 étages et un boss tous les dix : drakes, Baron Nashor, Dragon ancestral. Puis une tour difficile qui rejoue tout en plus fort.</p></div>
+      <div class="mode"><h3>Les Worlds</h3><p>Un tournoi à trois joueurs, ou en solo, du Play-In à la grande finale contre des équipes de pros. Une défaite et c'est fini.</p></div>
+      <div class="mode"><h3>La jungle</h3><p>Le farm : chasses rapides, enchaînements de camps avec un Châtiment à placer au bon moment, exploration d'une carte de buissons.</p></div>
+      <div class="mode"><h3>Le raid</h3><p>De trois à cinq joueurs contre Ryze, qui s'adapte au groupe. C'est lui qui débloque les runes.</p></div>
+      <div class="mode"><h3>L'arène et les duels</h3><p>Le PvP, avec un classement de Fer à Challenger et des duels en direct entre joueurs.</p></div>
+      <div class="mode"><h3>Et le reste</h3><p>Donjons, boss de serveur à heures fixes, tournoi de la LEC, forge d'items et quiz sur les champions et les pros.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sous le capot</h2>
+    <ul class="tech">
+      <li><strong>Python, discord.py et SQLite</strong> pour le bot : commandes slash, boutons, menus et panneaux qui survivent aux redémarrages.</li>
+      <li><strong>Un moteur de combat partagé</strong> entre le bot et le site : vitesse, jauges, ultimes, boucliers, résistances et traits de boss.</li>
+      <li><strong>L'équilibrage par simulation</strong> : des milliers de combats simulés pour régler chaque étage et classer les cartes par mode.</li>
+      <li><strong>Des images générées en Python</strong> avec Pillow : les cartes, les arènes de combat et de courtes animations.</li>
+      <li><strong>Un site sans framework</strong> : serveur HTTP en Python, connexion Discord, et une arène animée en PixiJS.</li>
+      <li><strong>Une mise en production automatique</strong> sur un serveur Linux, avec sauvegardes quotidiennes et un site de test sur sa propre branche.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Projet de fans, non affilié à Riot Games. League of Legends et les noms associés appartiennent à Riot Games. Aucune vente : tout se gagne en jouant.</p>
+    <p>Conçu et développé par Frankeur, en octobre 2026.</p>
+  </footer>
+</main>
+</body>
+</html>
