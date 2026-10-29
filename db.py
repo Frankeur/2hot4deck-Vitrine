@@ -71,124 +71,29 @@ def operation_unique(cle):
     return True
 
 
-# 10 octobre 2026 : arrivée des packs UR (un tous les 50 packs ouverts). Les packs déjà ouverts comptent.
-if operation_unique("packs_ur_retroactifs_2026_10_10"):
-    con.execute("UPDATE joueurs SET packs_ur = packs / 50")
 con.commit()
 
-# 10 octobre 2026 : une charge de jungle par niveau de compte déjà gagné (la règle « +1 charge par niveau » vient d'arriver).
-if operation_unique("charges_par_niveau_retroactives_2026_10_10"):
-    con.execute("UPDATE joueurs SET charges = charges + niveau - 1 WHERE niveau > 1")
 con.commit()
 
-# 11 octobre 2026, 01h : remise à zéro des essais du jour (raid, donjons, arène, cible du pack), demandée par le propriétaire
-# après les tests de la nuit, pour que chacun retrouve ses essais complets au réveil.
-if operation_unique("essais_du_jour_remis_2026_10_11"):
-    con.execute("UPDATE joueurs SET raid_jour = '', donjon_jour = '', donjon_essais = 0, arene_jour = '', arene_combats = 0, cible_jour = ''")
 con.commit()
 
-# 11 octobre 2026, 16h50 : seule une victoire consomme désormais le raid du jour. Ceux qui ont perdu aujourd'hui retrouvent leur raid.
-if operation_unique("raid_rendu_apres_defaite_2026_10_11"):
-    try:
-        con.execute("UPDATE joueurs SET raid_jour = '' WHERE raid_jour != '' AND NOT EXISTS (SELECT 1 FROM combats_journal c "
-                    "WHERE c.guild_id = joueurs.guild_id AND c.user_id = joueurs.user_id AND c.mode = 'raid' AND c.victoire = 1 AND c.moment > ?)",
-                    (time.time() - 16 * 3600,))
-    except sqlite3.OperationalError:
-        pass   # base toute neuve : rien à rendre
 con.commit()
 
-# 11 octobre 2026, 18h : Ashe devient une SSR réservée aux Worlds ; à la demande du propriétaire elle est retirée des collections,
-# sans remboursement. Les cartes sont gardées dans cartes_retirees, au cas où il faudrait revenir en arrière ou compenser.
-if operation_unique("retrait_ashe_2026_10_11"):
-    con.execute("CREATE TABLE IF NOT EXISTS cartes_retirees (operation TEXT, guild_id INTEGER, user_id INTEGER, carte TEXT, niveau INTEGER, xp INTEGER, etoiles INTEGER, doublons INTEGER)")
-    try:
-        con.execute("INSERT INTO cartes_retirees SELECT 'retrait_ashe_2026_10_11', guild_id, user_id, carte, niveau, xp, etoiles, doublons FROM cartes WHERE carte = 'Ashe'")
-        con.execute("DELETE FROM cartes WHERE carte = 'Ashe'")
-        con.execute("UPDATE items SET carte = '' WHERE carte = 'Ashe'")
-        for _l in con.execute("SELECT guild_id, user_id, equipe, defense FROM joueurs WHERE equipe LIKE '%Ashe%' OR defense LIKE '%Ashe%'").fetchall():
-            con.execute("UPDATE joueurs SET equipe = ?, defense = ? WHERE guild_id = ? AND user_id = ?",
-                        (",".join(x for x in (_l[2] or "").split(",") if x and x != "Ashe"), ",".join(x for x in (_l[3] or "").split(",") if x and x != "Ashe"), _l[0], _l[1]))
-    except sqlite3.OperationalError:
-        pass   # base toute neuve
 con.commit()
 
-# 11 octobre 2026, 17h : les donjons redeviennent un combat unique, 3 victoires par jour, sans clés. Les clés en stock deviennent
-# des victoires bonus pour aujourd'hui (4 clés = 4 victoires de plus).
-if operation_unique("cles_en_victoires_bonus_2026_10_11"):
-    try:
-        con.execute("UPDATE joueurs SET donjon_jour = ?, donjon_essais = -cles WHERE cles > 0", (time.strftime("%Y-%m-%d"),))
-    except sqlite3.OperationalError:
-        pass
 con.commit()
 
-# 11 octobre 2026 : Akali, Jinx, Yasuo et Orianna sortent des packs. Ceux qui les visaient retrouvent le droit de choisir une autre cible.
-if operation_unique("cibles_hors_packs_2026_10_11"):
-    con.execute("UPDATE joueurs SET cible = '', cible_jour = '' WHERE cible IN ('Akali', 'Jinx', 'Yasuo', 'Orianna')")
 con.commit()
 
-# 11 octobre 2026 : Orianna devient une SR réservée à la tour des pros. À la demande du propriétaire, elle est retirée de toutes les
-# collections, sans remboursement. Les cartes retirées sont gardées dans la table cartes_retirees, au cas où il faudrait revenir en arrière.
-if operation_unique("retrait_orianna_2026_10_11"):
-    con.execute("CREATE TABLE IF NOT EXISTS cartes_retirees (operation TEXT, guild_id INTEGER, user_id INTEGER, carte TEXT, niveau INTEGER, xp INTEGER, etoiles INTEGER, doublons INTEGER)")
-    try:   # sur une base toute neuve la colonne des doublons n'existe pas encore : il n'y a alors rien à sauvegarder
-        con.execute("INSERT INTO cartes_retirees SELECT 'retrait_orianna_2026_10_11', guild_id, user_id, carte, niveau, xp, etoiles, doublons FROM cartes WHERE carte = 'Orianna'")
-    except sqlite3.OperationalError:
-        pass
-    con.execute("DELETE FROM cartes WHERE carte = 'Orianna'")
-    con.execute("UPDATE items SET carte = '' WHERE carte = 'Orianna'")
-    for _l in con.execute("SELECT guild_id, user_id, equipe, defense FROM joueurs WHERE equipe LIKE '%Orianna%' OR defense LIKE '%Orianna%'").fetchall():
-        con.execute("UPDATE joueurs SET equipe = ?, defense = ? WHERE guild_id = ? AND user_id = ?",
-                    (",".join(x for x in (_l[2] or "").split(",") if x and x != "Orianna"), ",".join(x for x in (_l[3] or "").split(",") if x and x != "Orianna"), _l[0], _l[1]))
-    con.execute("UPDATE joueurs SET cible = '', cible_jour = '' WHERE cible IN ('Orianna', 'MissFortune')")
 con.commit()
 
-# 11 octobre 2026 : Miss Fortune est réservée à la tour des pros ; à la demande du propriétaire elle est retirée de la collection du joueur
-# qui l'avait, sans remboursement. La carte est gardée dans cartes_retirees, au cas où il faudrait revenir en arrière.
-if operation_unique("retrait_missfortune_2026_10_11"):
-    con.execute("CREATE TABLE IF NOT EXISTS cartes_retirees (operation TEXT, guild_id INTEGER, user_id INTEGER, carte TEXT, niveau INTEGER, xp INTEGER, etoiles INTEGER, doublons INTEGER)")
-    try:   # sur une base toute neuve la colonne des doublons n'existe pas encore : il n'y a alors rien à sauvegarder
-        con.execute("INSERT INTO cartes_retirees SELECT 'retrait_missfortune_2026_10_11', guild_id, user_id, carte, niveau, xp, etoiles, doublons FROM cartes WHERE carte = 'MissFortune'")
-    except sqlite3.OperationalError:
-        pass
-    con.execute("DELETE FROM cartes WHERE carte = 'MissFortune'")
-    con.execute("UPDATE items SET carte = '' WHERE carte = 'MissFortune'")
-    for _l in con.execute("SELECT guild_id, user_id, equipe, defense FROM joueurs WHERE equipe LIKE '%MissFortune%' OR defense LIKE '%MissFortune%'").fetchall():
-        con.execute("UPDATE joueurs SET equipe = ?, defense = ? WHERE guild_id = ? AND user_id = ?",
-                    (",".join(x for x in (_l[2] or "").split(",") if x and x != "MissFortune"), ",".join(x for x in (_l[3] or "").split(",") if x and x != "MissFortune"), _l[0], _l[1]))
 con.commit()
 
-# 9 octobre 2026 : remise de tous les joueurs à 500 golds, à la demande du propriétaire.
-# Les anciens soldes sont conservés dans la table golds_sauvegarde, au cas où il faudrait revenir en arrière.
-if operation_unique("remise_a_500_golds_2026_10_09"):
-    con.execute("INSERT INTO golds_sauvegarde SELECT 'remise_a_500_golds_2026_10_09', guild_id, user_id, golds FROM joueurs")
-    con.execute("UPDATE joueurs SET golds = 500")
 con.commit()
 
-# 10 octobre 2026 : fin de l'alpha, remise à zéro générale demandée par le propriétaire (nouvelle tour, nouveaux taux).
-# Une copie complète de l'ancienne sauvegarde est gardée à côté, dans faille_avant_reset_2026_10_10.db.
-if operation_unique("reset_general_2026_10_10"):
-    chemin = os.environ.get("FAILLE_DB", "faille.db")
-    if chemin != ":memory:":
-        copie = sqlite3.connect(os.path.join(os.path.dirname(os.path.abspath(chemin)), "faille_avant_reset_2026_10_10.db"))
-        con.commit()
-        con.backup(copie)
-        copie.close()
-    for table in ("joueurs", "cartes", "items", "arene_journal"):
-        con.execute(f"DELETE FROM {table}")
 con.commit()
 
 
-# 10 octobre 2026, 02h45 : deuxième remise à zéro demandée par le propriétaire (tour à 100 étages, nouveaux réglages).
-# Copie de sécurité dans faille_avant_reset_2026_10_10_b.db.
-if operation_unique("reset_general_2026_10_10_b"):
-    chemin = os.environ.get("FAILLE_DB", "faille.db")
-    if chemin != ":memory:":
-        copie = sqlite3.connect(os.path.join(os.path.dirname(os.path.abspath(chemin)), "faille_avant_reset_2026_10_10_b.db"))
-        con.commit()
-        con.backup(copie)
-        copie.close()
-    for table in ("joueurs", "cartes", "items", "composants", "arene_journal"):
-        con.execute(f"DELETE FROM {table}")
 con.commit()
 
 con.execute("CREATE TABLE IF NOT EXISTS maj_postees (guild_id INTEGER, cle TEXT, PRIMARY KEY (guild_id, cle))")
@@ -351,80 +256,24 @@ def coachs(g, u):
     return {r["pro"]: r["nombre"] for r in con.execute("SELECT pro, nombre FROM coachs WHERE guild_id=? AND user_id=?", (g, u)).fetchall()}
 
 
-# 11 octobre 2026, 21h : correction de règle le soir de l'ouverture (une carte ne joue qu'une fois par équipe). Le redémarrage a coupé
-# le tournoi en cours : les cartes mises au repos ce soir-là sont libérées.
-if operation_unique("repos_worlds_rendu_2026_10_11"):
-    con.execute("DELETE FROM worlds_repos")
 con.commit()
 
 
-# 11 octobre 2026, 22h20 : soir de l'ouverture des Worlds, on teste encore. Le propriétaire offre un reset : toutes les cartes au
-# repos sont libérées (les packs gagnés et les équipes éliminées sont gardés).
-if operation_unique("repos_worlds_offert_2026_10_11_22h"):
-    con.execute("DELETE FROM worlds_repos")
 con.commit()
 
 
-# 11 octobre 2026, 22h20 : soir d'ouverture, on teste encore. Le propriétaire offre une remise à zéro : toutes les cartes au repos sont
-# libérées et le palier du jour est effacé (les packs déjà gagnés restent, et le palier peut être regagné).
-if operation_unique("reset_worlds_offert_2026_10_11"):
-    con.execute("DELETE FROM worlds_repos")
-    try:
-        con.execute("UPDATE joueurs SET worlds_jour = '', worlds_palier = 0")
-    except sqlite3.OperationalError:
-        pass
 con.commit()
 
 
-# 11 octobre 2026, 22h25 : le reset offert ne devait pas rendre les packs du jour. Le palier du jour est remis à ce que chacun a
-# déjà éliminé (le mode a ouvert aujourd'hui : toutes les éliminations datent d'aujourd'hui). Les cartes restent libérées.
-if operation_unique("palier_du_jour_remis_2026_10_11"):
-    try:
-        for _r in con.execute("SELECT guild_id, user_id, MAX(equipe) + 1 AS palier FROM worlds_equipes GROUP BY guild_id, user_id").fetchall():
-            con.execute("UPDATE joueurs SET worlds_jour = ?, worlds_palier = MAX(worlds_palier, ?) WHERE guild_id = ? AND user_id = ?",
-                        (time.strftime("%Y-%m-%d"), _r["palier"], _r["guild_id"], _r["user_id"]))
-    except sqlite3.OperationalError:
-        pass
 con.commit()
 
 
-# 11 octobre 2026, 22h55 : le repos passe de 24 h à 8 h. Les cartes déjà au repos gagnent les 16 h de différence.
-if operation_unique("repos_worlds_8h_2026_10_11"):
-    con.execute("UPDATE worlds_repos SET fin = fin - 16 * 3600")
 con.commit()
 
-# 12 octobre 2026 : les donjons passent à une réserve de victoires (5 au plus, une toutes les 5 heures). Tout le monde repart plein.
-if operation_unique("donjons_reserve_2026_10_12"):
-    con.execute("UPDATE joueurs SET donjon_stock = 5, donjon_moment = ?", (time.time(),))
 con.commit()
 
-# 12 octobre 2026 : Akali et Sylas passent en SR (cartes de la LEC). À la demande du propriétaire, elles sont retirées des collections
-# qui les avaient, sans remboursement. Les cartes sont gardées dans cartes_retirees, au cas où il faudrait revenir en arrière.
-if operation_unique("retrait_akali_sylas_2026_10_12"):
-    con.execute("CREATE TABLE IF NOT EXISTS cartes_retirees (operation TEXT, guild_id INTEGER, user_id INTEGER, carte TEXT, niveau INTEGER, xp INTEGER, etoiles INTEGER, doublons INTEGER)")
-    for _carte in ("Akali", "Sylas"):
-        try:
-            con.execute("INSERT INTO cartes_retirees SELECT 'retrait_akali_sylas_2026_10_12', guild_id, user_id, carte, niveau, xp, etoiles, doublons FROM cartes WHERE carte = ?", (_carte,))
-        except sqlite3.OperationalError:
-            pass
-        con.execute("DELETE FROM cartes WHERE carte = ?", (_carte,))
-        con.execute("UPDATE items SET carte = '' WHERE carte = ?", (_carte,))
-        try:
-            con.execute("DELETE FROM worlds_repos WHERE carte = ?", (_carte,))
-        except sqlite3.OperationalError:
-            pass
-        for _l in con.execute("SELECT guild_id, user_id, equipe, defense, runes_equipees FROM joueurs WHERE equipe LIKE ? OR defense LIKE ? OR runes_equipees LIKE ?",
-                              (f"%{_carte}%",) * 3).fetchall():
-            garder = lambda texte: ",".join(x for x in (texte or "").split(",") if x and x != _carte and not x.startswith(_carte + ":"))
-            con.execute("UPDATE joueurs SET equipe = ?, defense = ?, runes_equipees = ? WHERE guild_id = ? AND user_id = ?",
-                        (garder(_l[2]), garder(_l[3]), garder(_l[4]), _l[0], _l[1]))
-    con.execute("UPDATE joueurs SET cible = '', cible_jour = '' WHERE cible IN ('Akali', 'Sylas')")
 con.commit()
 
-# 12 octobre 2026 : un Ange gardien (niveau 1, non équipé) offert à Joueur G par le propriétaire. S'il l'a déjà, rien ne change.
-if operation_unique("ange_gardien_shish_2026_10_12"):
-    con.execute("INSERT OR IGNORE INTO items (guild_id, user_id, item, niveau, carte) VALUES (?, ?, 'ange', 1, '')",
-                (100000000000000007, 100000000000000001))
 con.commit()
 
 
@@ -663,29 +512,11 @@ def tous_les_joueurs(g):
     return [dict(r) for r in con.execute("SELECT * FROM joueurs WHERE guild_id=? ORDER BY golds DESC", (g,))]
 
 
-# 12 octobre 2026, ouverture de la LEC : le ticket Worlds devient obligatoire, chacun en a 2 pour commencer.
-if getattr(data, "LEC_OUVERTE", False) and operation_unique("tickets_worlds_ouverture_lec_2026_10_12"):
-    con.execute("UPDATE joueurs SET tickets_worlds = ?", (data.WORLDS_TICKETS_DEPART,))
-    con.execute("UPDATE worlds_repos SET fin = fin - 5 * 3600")   # le repos des Worlds passe de 8 h à 3 h : les cartes déjà au repos en profitent
 con.commit()
 
-# 12 octobre 2026, 19h10 : le propriétaire rend le raid du jour à tout le monde, et son essai de LEC à Joueur C (coupé par un redémarrage).
-if operation_unique("raid_rendu_et_lec_Joueur C_2026_10_12"):
-    try:
-        con.execute("UPDATE joueurs SET raid_jour = ''")
-        con.execute("UPDATE joueurs SET lec_essais = 0 WHERE user_id = 100000000000000003")
-    except sqlite3.OperationalError:
-        pass
 con.commit()
 
 
-# 12 octobre 2026, 20h30 : plus de repos aux Worlds (les tickets limitent les tournois) : toutes les cartes au repos sont libérées.
-if operation_unique("worlds_sans_repos_2026_10_12"):
-    con.execute("DELETE FROM worlds_repos")
 con.commit()
 
-# 12 octobre 2026, 21h15 : le propriétaire rend un ticket Worlds à Joueur C, Joueur B et Joueur A.
-if operation_unique("ticket_offert_2026_10_12_21h15"):
-    for _u in (100000000000000003, 100000000000000004, 100000000000000002):
-        con.execute("UPDATE joueurs SET tickets_worlds = MIN(?, tickets_worlds + 1) WHERE user_id = ?", (data.WORLDS_TICKETS_MAX, _u))
 con.commit()
